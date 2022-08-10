@@ -17,19 +17,9 @@ def main() -> None:
         print("  > black-junit < results.txt > report.xml")
         exit(0)
     lines = [line.rstrip() for line in sys.stdin.readlines()]
-    files_fail = [
-        l[len(filter_would_reformat) :]
-        for l in lines
-        if l.startswith(filter_would_reformat)
-    ]
-    files_good = [
-        l[: -len(filter_already_formated)]
-        for l in lines
-        if l.endswith(filter_already_formated)
-    ]
-    files_good += [
-        l[: -len(filter_not_modified)] for l in lines if l.endswith(filter_not_modified)
-    ]
+    files_fail = [l[len(filter_would_reformat) :] for l in lines if l.startswith(filter_would_reformat)]
+    files_good = [l[: -len(filter_already_formated)] for l in lines if l.endswith(filter_already_formated)]
+    files_good += [l[: -len(filter_not_modified)] for l in lines if l.endswith(filter_not_modified)]
     cases = []
     for filename in files_fail:
         case = TestCase(filename.split("/")[-1], file=filename)
