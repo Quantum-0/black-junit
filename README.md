@@ -23,8 +23,14 @@ black-junit < results.txt > report.xml
 # Badges
 
 [![wakatime](https://wakatime.com/badge/github/Quantum-0/black-junit.svg)](https://wakatime.com/badge/github/Quantum-0/black-junit)
-[![PyPI version](https://badge.fury.io/py/black-junit.svg)](https://badge.fury.io/py/black-junit)
 [![Black](https://github.com/Quantum-0/black-junit/actions/workflows/black.yml/badge.svg)](https://github.com/Quantum-0/black-junit/actions/workflows/black.yml)
+[![GitHub Org's stars](https://img.shields.io/github/stars/quantum-0/black-junit)](https://github.com/Quantum-0/black-junit/)
+![PyPI - License](https://img.shields.io/pypi/l/black-junit)
+[![PyPI](https://img.shields.io/pypi/v/black-junit)](https://pypi.org/project/black-junit/)
+![PyPI - Status](https://img.shields.io/pypi/status/black-junit)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/black-junit)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/black-junit)
+
 
 # License
 
