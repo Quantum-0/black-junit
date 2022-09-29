@@ -1,5 +1,1 @@
-from black_junit.main import main, __description__  # noqa
-
-__version__ = "0.2.2"
-__author__ = "Anton Kurenkov (Quantum0)"
-__description__ = __description__
+from black_junit.main import main

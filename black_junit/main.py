@@ -3,7 +3,7 @@ import sys
 
 from junit_xml import TestCase, TestSuite
 
-__description__ = "Tool for generation JUnit report from black/blue output"
+from black_junit.__pkginfo__ import __description__
 
 
 def main() -> None:

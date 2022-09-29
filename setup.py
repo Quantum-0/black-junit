@@ -1,4 +1,4 @@
-from black_junit import __version__
+from black_junit.__pkginfo__ import __version__
 from setuptools import setup
 
 # read the contents of your README file
