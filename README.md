@@ -1,6 +1,6 @@
 # black-junit
 
-This project is a tool for generation JUnit report from black/blue output
+This project is a tool for generation JUnit's report from black/blue output
 
 # Install
 

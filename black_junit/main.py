@@ -3,12 +3,12 @@ import sys
 
 from junit_xml import TestCase, TestSuite
 
-__description__ = "Tool for generation JUnit report from black/blue output"
+from black_junit.__pkginfo__ import __description__
 
 
 def main() -> None:
     filter_not_modified = " wasn't modified on disk since last run."
-    filter_already_formated = " already well formatted, good job."
+    filter_already_formatted = " already well formatted, good job."
     filter_would_reformat = "would reformat "
     if select.select([sys.stdin], [], [], 1) == ([], [], []):
         print(__description__)
@@ -18,7 +18,7 @@ def main() -> None:
         exit(0)
     lines = [line.rstrip() for line in sys.stdin.readlines()]
     files_fail = [l[len(filter_would_reformat) :] for l in lines if l.startswith(filter_would_reformat)]
-    files_good = [l[: -len(filter_already_formated)] for l in lines if l.endswith(filter_already_formated)]
+    files_good = [l[: -len(filter_already_formatted)] for l in lines if l.endswith(filter_already_formatted)]
     files_good += [l[: -len(filter_not_modified)] for l in lines if l.endswith(filter_not_modified)]
     cases = []
     for filename in files_fail:
