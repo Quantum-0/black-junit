@@ -10,7 +10,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
     name="black-junit",
     version=__version__,
-    description="Tool for generation JUnit report from black/blue output",
+    description=__description__,
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/quantum-0/black-junit",
