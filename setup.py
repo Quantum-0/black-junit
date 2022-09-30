@@ -1,4 +1,4 @@
-from black_junit.__pkginfo__ import __version__
+from black_junit.__pkginfo__ import __version__, __description__
 from setuptools import setup
 
 # read the contents of your README file
@@ -10,7 +10,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
     name="black-junit",
     version=__version__,
-    description="Tool for generation JUnit report from black/blue output",
+    description=__description__,
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/quantum-0/black-junit",
@@ -40,7 +40,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "black-junit=black_junit:main",
+            "black-junit=black_junit.main:main",
         ]
     },
 )
