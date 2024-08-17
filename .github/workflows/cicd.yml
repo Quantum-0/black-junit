@@ -19,6 +19,8 @@ jobs:
     environment:
       name: pypi
       url: https://pypi.org/project/black-junit
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
